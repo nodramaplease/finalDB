@@ -1,0 +1,42 @@
+
+docker run -p 27017:27017 -d --name mongo \
+        -e MONGO_INITDB_ROOT_USERNAME=admin \
+        -e MONGO_INITDB_ROOT_PASSWORD=password \
+        mongo
+
+
+var mapFunction1 = function() {
+   emit(this.city, {open:this.opening.getUTCHours(), close:this.closing.getUTCHours()});
+};
+var reduceFunction1 = function(key, values) {
+   var result = [];
+   var now = new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Almaty"})).getHours();
+   for (let i = 0; i < values.length; i++) {
+      let closing = values[i].close
+      if (values[i].close - values[i].open < 0) {
+         closing += 24
+      }
+      if (now > values[i].open && now < closing) {
+         result.push(values[i])
+      }
+   }
+   return result.length;
+};
+db.cinemas.mapReduce(mapFunction1, reduceFunction1, {out: "openedCinemas"})
+db.openedCinemas.find().sort({value:1})
+
+
+
+
+
+
+
+
+
+
+
+
+_________________________________________
+
+Here is examples of queries from assignment 3
+

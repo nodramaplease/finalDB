@@ -1,0 +1,15 @@
+name,city,opening,closing,halls_count,avg_ticket_price,movies_count,type,customers_count
+Chaplin MEGA Silk Way,Astana,10:00:00+0600,23:00:00+0600,6,1800,6,IMAX,1000
+Eurasia Cinema7,Astana,11:00:00+0600,23:00:00+0600,5,1500,6,IMAX,800
+Keruen Cinema (Talan Gallery),Astana,09:00:00+0600,23:00:00+0600,4,5000,6,IMAX,100
+Kinopark 7 IMAX Keruen,Astana,12:00:00+0600,23:00:00+0600,7,1700,8,IMAX,1200
+Kinopark 8 IMAX Saryarka,Astana,10:00:00+0600,23:00:00+0600,6,1800,6,3D,950
+AMC Loews West 34th Street 14,New-York,09:00:00-0500,23:00:00-0500,10,4000,8,IMAX,1500
+AMC Loews Shore 8,Huntington,10:00:00-0500,23:00:00-0500,9,3800,8,IMAX,1200
+Five Star Theatres Bellmore Playhouse,Bellmore,12:00:00-0500,23:00:00-0500,6,3900,9,IMAX,900
+Bow Tie Cinemas Grand Ave,Baldwin,11:00:00-0500,23:00:00-0500,8,3500,9,IMAX,1000
+Rave Buckland Hills 18,Manchester,11:00:00+0000,23:00:00+0000,10,4500,8,IMAX,1100
+Starplex Berlin 12,Berlin,10:00:00+0100,23:00:00+0100,7,5000,8,IMAX,900
+Regal Fenway Stadium 13,Boston,09:00:00-0500,23:00:00-0500,7,3800,7,IMAX,1200
+Theatre N at Nemours,Wilmington,10:00:00-0500,23:00:00-0500,8,4000,9,IMAX,1300
+Moorlyn Family Theatre,Ocean City,12:00:00-0500,23:00:00-0500,6,4200,8,IMAX,1235
