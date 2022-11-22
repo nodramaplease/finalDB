@@ -64,6 +64,12 @@ db.cinemas.aggregate(
 ).sort({avg_ticket_price:-1})
 
 
+3.
+db.cinemas.find({customers_count:{$gt:800}, city:"Astana"}).sort({halls_count:1})
+
+4. 
+db.cinemas.find({city:"Astana", avg_ticket_price:{$gt:1700}})
+
 
 
 
