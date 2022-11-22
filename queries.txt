@@ -30,9 +30,50 @@ db.cinemas.mapReduce(mapFunction1, reduceFunction1, {out: "openedCinemas"})
 db.openedCinemas.find().sort({value:1})
 
 
+db.cinemas.aggregate(
+   [
+      {
+         "$project":
+            {
+               name:1,
+               avg_ticket_price:1, 
+               customers_count:1,
+               avg_ticket_price:1, 
+               daily_income: 
+                  { 
+                  "$multiply": 
+                     [
+                        "$avg_ticket_price",
+                        "$customers_count"
+                     ]
+                  }
+            }
+      },
+      {
+         "$match":
+            {
+               "$and":
+                  [
+                     {daily_income:{"$lt":4000000}},
+                     {name:/Cinema/}
+                  ]
+            }
+      }
+   ]
+).sort({avg_ticket_price:-1})
 
 
 
+
+      {
+         "$match":
+            {
+               daily_income:
+                  {
+                     "$lt":4000000
+                  }
+            }
+      }
 
 
 
