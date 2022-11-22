@@ -5,6 +5,10 @@ docker run -p 27017:27017 -d --name mongo \
         mongo
 
 
+
+Задача 2:
+ 1.
+
 var mapFunction1 = function() {
    emit(this.city, {open:this.opening.getUTCHours(), close:this.closing.getUTCHours()});
 };
@@ -33,10 +37,4 @@ db.openedCinemas.find().sort({value:1})
 
 
 
-
-
-
-_________________________________________
-
-Here is examples of queries from assignment 3
 
