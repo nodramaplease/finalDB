@@ -29,6 +29,7 @@ var reduceFunction1 = function(key, values) {
 db.cinemas.mapReduce(mapFunction1, reduceFunction1, {out: "openedCinemas"})
 db.openedCinemas.find().sort({value:1})
 
+2.
 
 db.cinemas.aggregate(
    [
@@ -63,17 +64,6 @@ db.cinemas.aggregate(
 ).sort({avg_ticket_price:-1})
 
 
-
-
-      {
-         "$match":
-            {
-               daily_income:
-                  {
-                     "$lt":4000000
-                  }
-            }
-      }
 
 
 
